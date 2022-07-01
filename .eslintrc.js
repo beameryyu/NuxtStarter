@@ -10,11 +10,10 @@ module.exports = {
     sourceType: 'module'
   },
   extends: [
-    'standard',
-    'eslint:recommended',
+    '@nuxtjs/eslint-config-typescript',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:json/recommended'
+    'plugin:jsonc/recommended-with-jsonc'
   ],
   plugins: [
     'vue',
@@ -32,5 +31,16 @@ module.exports = {
       typescript: {}
     }
   },
-  ignorePatterns: ['dist']
+  ignorePatterns: ['dist'],
+  overrides: [
+    {
+      files: ['*.json', '*.json5'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        quotes: ['error', 'double'],
+        'quote-props': ['error', 'always'],
+        'comma-dangle': ['error', 'never']
+      }
+    }
+  ]
 }

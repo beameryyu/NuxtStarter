@@ -21,8 +21,14 @@ defineProps({
       target="_blank"
     >Volar</a>
   </p>
-
   <p>
+    <a
+      href="https://v3.nuxtjs.org/"
+      target="_blank"
+    >
+      Nuxt3 Documentation
+    </a>
+    |
     <a
       href="https://vitejs.dev/guide/features.html"
       target="_blank"
